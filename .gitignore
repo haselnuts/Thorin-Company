@@ -1,6 +1,6 @@
-core.Microsoft*
-core.mongo*
-core.python*
+# all listings in this file will be ignored!!
+# / means that it is a directory
+
 env.py
 __pycache__/
-*.py[cod]
+
