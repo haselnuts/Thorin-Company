@@ -6,13 +6,15 @@ if os.path.exists("env.py"):
 # 2 line space betwenn function needed ALWAYS, this is called PEP8 compliant
 # request needed for forms
 # flash needed for feedback to user, to provide a "flashed message"
-# need to create a secret key, because Flask cryptographically signs all messages for security purposes
-# need to create a .gitignore file, any file or folder will be igrnored by GitHub so we do not accidently commit files with sensitive information
-# also, we need to create a new py file called env.py, here we hide any sensitive information
-# if statement os.path.exists...  will only import env.py file if it exists -> new directory __pycache__ will be created after saving file
-
-
-
+# need to create a secret key, because Flask cryptographically signs..
+# ..all messages for security purposes
+# need to create a .gitignore file, any file or folder will be..
+# ..igrnored by GitHub so we do not accidently commit files with..
+# ..sensitive information
+# also, we need to create a new py file called env.py, here we hide..
+# ..any sensitive information
+# if statement os.path.exists...  will only import env.py file if..
+# ..it exists -> new directory __pycache__ will be created after saving file
 app = Flask(__name__)
 # instance of the class Flask
 # flask needs this to look for templates and static files
@@ -59,7 +61,8 @@ def careers():
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        flash("Thanks {}, we have received your message!".format(request.form.get("name")))
+        flash("Thanks {}, we have received your message!".format(
+            request.form.get("name")))
     return render_template("contact.html", page_title="Contact")
 
 
