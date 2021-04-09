@@ -75,3 +75,4 @@ if __name__ == "__main__":
         # debug = True only for developement, needs to be changed
         # before submition of the project
     )
+# IP and PORT needed for Deployment at Heroku or other supporters
